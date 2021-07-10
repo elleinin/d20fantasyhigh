@@ -37,7 +37,7 @@ h1 {
 
 h2 {
     font-family: 'Staatliches', cursive;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 h3 {
@@ -57,12 +57,13 @@ a {
 }
 
 section {
-    /* height: 100vh; */
+    height: 100vh;
     width: 100%;
+    /* margin: 50px 50px 50px 50px; */
 }
 
 .container {
-    padding: 50px;
+    /* padding: 50px; */
     width: 100%;
 }
 
@@ -82,7 +83,7 @@ section {
 
 #home {
     height: 200vh;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 
 .landing {
@@ -103,8 +104,9 @@ section {
     height: 100%;
     position: absolute;
     z-index: 2;
-    background-image: linear-gradient(#000510, #00bbcd);
+    background-image: linear-gradient(#000510, #000510, #00bbcd);
     margin-top: 100vh;
+    padding: 100px;
     color: whitesmoke;
 }
 
@@ -115,4 +117,80 @@ section {
     background-color: #00bbcd;
     position: absolute;
     z-index: 2;
+    padding: 100px;
+}
+
+#cast .container {
+    display: grid;
+    grid-template-areas: 'cast info';
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    width: 100%;
+}
+
+#cast .wrapper.cast {
+    grid-area: cast;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 'fig adaine gorgug' 'fabian kristen riz';
+    grid-template-columns: repeat(3, 1fr);
+    padding-right: 50px;
+    gap: 50px;
+}
+
+#cast .bg {
+    display: none;
+}
+
+.wrapper.cast .card {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.card.fig {
+    grid-area: fig;
+    background-image: url("img/fig.png");
+}
+
+.card.adaine {
+    grid-area: adaine;
+    background-image: url("img/adaine.png");
+}
+
+.card.gorgug {
+    grid-area: gorgug;
+    background-image: url("img/gorgug.png");
+}
+
+.card.fabian {
+    grid-area: fabian;
+    background-image: url("img/fabian.png");
+}
+
+.card.kristen {
+    grid-area: kristen;
+    background-image: url("img/kristen.png");
+}
+
+.card.riz {
+    grid-area: riz;
+    background-image: url("img/riz.png");
+}
+
+#cast .wrapper.info {
+    grid-area: info;
+    height: 100%;
+    width: 100%;
+}
+
+.info.fig,
+.info.adaine,
+.info.gorgug,
+.info.fabian,
+.info.kristen,
+.info.riz {
+    display: none;
 }

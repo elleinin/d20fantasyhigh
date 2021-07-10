@@ -1,0 +1,112 @@
+*::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #DF0F74;
+}
+
+*::-webkit-scrollbar-track {
+    background: #010C12;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+    text-decoration: none;
+    list-style: none;
+    font-weight: normal;
+    scrollbar-width: 5px;
+    scrollbar-color: white #DF0F74;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1rem;
+    max-width: 100vw;
+}
+
+body {
+    /* background-color: #000510;  */
+    background-color: #000510;
+}
+
+h1 {
+    font-family: 'Staatliches', cursive;
+    font-size: 5rem;
+}
+
+h2 {
+    font-family: 'Staatliches', cursive;
+    font-size: 2rem;
+}
+
+h3 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.75rem;
+}
+
+p {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.25rem;
+}
+
+a {
+    color: inherit;
+    font-family: 'Staatliches', cursive;
+    font-size: 1rem;
+}
+
+section {
+    height: 100vh;
+    padding: 50px;
+}
+
+
+/* .container {
+    margin: 30 0;
+} */
+
+.navbar {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    background: #00bbcd;
+    color: #fafaff;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#home {
+    margin-top: 50px;
+    padding: 0;
+}
+
+#home .container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "pic info";
+    grid-template-columns: repeat(2, 1fr);
+    /* padding: 20px; */
+    column-gap: 50px;
+}
+
+.landing {
+    width: 100%;
+    height: 100%;
+    background-image: url("img/bg.png");
+    background-size: cover;
+    background-position: center;
+    grid-area: pic;
+}
+
+.intro {
+    width: 100%;
+    height: 100%;
+    grid-area: info;
+    color: whitesmoke;
+    margin: 0 auto;
+}

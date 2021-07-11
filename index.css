@@ -71,10 +71,22 @@ section {
     position: fixed;
     height: 50px;
     width: 100%;
-    background: #00bbcd;
-    color: #fafaff;
+    background: #a55285;
     top: 0;
     z-index: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    color: #fafaff;
+    top: 0;
+    z-index: 5;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -99,24 +111,121 @@ section {
     z-index: 0;
 }
 
-.intro {
+.landing.out {
+    animation-name: out;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.fhh1,
+.fhp {
+    opacity: 0;
+}
+
+.fhh1.in,
+.fhp.in {
+    animation-name: in;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.fhh1 {
+    padding-top: 10vh;
+}
+
+.fhp.in {
+    animation-delay: 1s;
+}
+
+#intro .intro {
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: 2;
-    background-image: linear-gradient(#000510, #000510, #00bbcd);
-    margin-top: 100vh;
+    background-image: linear-gradient(#000510, #000510, #00bbcd, #a55285);
     padding: 100px;
     color: whitesmoke;
+    text-align: center;
 }
+
+#intro .container {
+    height: 100%;
+    width: 100%;
+}
+
+#intro .wrapper {
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10vh;
+}
+
+#fig {
+    height: 60vh;
+    position: absolute;
+    margin-right: 70vw;
+}
+
+#adaine {
+    height: 35vh;
+    position: absolute;
+    margin-right: 40vw;
+}
+
+#gorgug {
+    height: 53vh;
+    position: absolute;
+    margin-right: 5vw;
+}
+
+#fabian {
+    height: 55vh;
+    position: absolute;
+    margin-left: 21vw;
+}
+
+#kristen {
+    height: 47vh;
+    position: absolute;
+    margin-left: 48vw;
+}
+
+#riz {
+    height: 40vh;
+    position: absolute;
+    margin-left: 70vw;
+}
+
+#bet {
+    height: 300px;
+    width: 100%;
+    background-color: #a55285;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ------------------------- */
 
 
 /* ----- CAST MEMBERS ------ */
 
+
+/* ------------------------- */
+
 #cast {
+    /* height: 100vh; */
+    background-size: cover;
+    background-position: center;
     background-color: #a55285;
     /* background-image: linear-gradient(to bottom right, #00bbcd, #00bbcd, #a55285); */
-    position: absolute;
+    position: relative;
     z-index: 2;
     padding: 100px;
 }
@@ -129,6 +238,12 @@ section {
     width: 100%;
 }
 
+
+/* ----- CAST CARDS ------ */
+
+
+/* ----------------------- */
+
 #cast .wrapper.cast {
     grid-area: cast;
     height: 100%;
@@ -140,47 +255,120 @@ section {
     gap: 25px;
 }
 
-#cast .bg {
-    display: none;
-}
-
 .wrapper.cast .card {
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
+    z-index: 2;
 }
 
-.card.fig {
+.fig.card:hover,
+.adaine.card:hover,
+.gorgug.card:hover,
+.fabian.card:hover,
+.kristen.card:hover,
+.riz.card:hover {
+    border: 2px solid #00bbcd;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+}
+
+.fig.card {
     grid-area: fig;
     background-image: url("img/fig.png");
 }
 
-.card.adaine {
+.adaine.card {
     grid-area: adaine;
     background-image: url("img/adaine.png");
 }
 
-.card.gorgug {
+.gorgug.card {
     grid-area: gorgug;
     background-image: url("img/gorgug.png");
 }
 
-.card.fabian {
+.fabian.card {
     grid-area: fabian;
     background-image: url("img/fabian.png");
 }
 
-.card.kristen {
+.kristen.card {
     grid-area: kristen;
     background-image: url("img/kristen.png");
 }
 
-.card.riz {
+.riz.card {
     grid-area: riz;
     background-image: url("img/riz.png");
 }
+
+
+/* ----- CAST BACKGROUNDS ------ */
+
+
+/* ----------------------------- */
+
+#cast .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* display: none; */
+    top: 0;
+    left: 0;
+    background-size: 100%;
+    background-position: center;
+    animation-name: fadeOut;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+#cast .bg.show {
+    display: inline;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+.fig.bg {
+    /* background-image: linear-gradient(to bottom left, #ffa666, #a55285, #410b6e); */
+    background-image: url('img/bgfig.png');
+}
+
+.adaine.bg {
+    /* background-image: linear-gradient(to bottom, #BAD38B, #FCD8B8, #404087); */
+    background-image: url('img/bgadaine.png');
+}
+
+.gorgug.bg {
+    /* background-image: linear-gradient(to bottom left, #ffa666, #a55285, #410b6e); */
+    background-image: url('img/bggorgug.png');
+}
+
+.fabian.bg {
+    /* background-image: linear-gradient(to bottom left, #ffa666, #a55285, #410b6e); */
+    background-image: url('img/bgfig.png');
+}
+
+.kristen.bg {
+    /* background-image: linear-gradient(to bottom, #BAD38B, #FCD8B8, #404087); */
+    background-image: url('img/bgadaine.png');
+}
+
+.riz.bg {
+    /* background-image: linear-gradient(to bottom left, #ffa666, #a55285, #410b6e); */
+    background-image: url('img/bggorgug.png');
+}
+
+
+/* ----- CAST INFO ------ */
+
+
+/* ---------------------- */
 
 #cast .wrapper.info {
     grid-area: info;
@@ -191,13 +379,115 @@ section {
     background-color: #00bbcd;
     border-radius: 10px;
     padding: 50px;
+    z-index: 2;
 }
 
-.info.fig,
-.info.adaine,
-.info.gorgug,
-.info.fabian,
-.info.kristen,
-.info.riz {
+.start.info,
+.fig.info,
+.adaine.info,
+.gorgug.info,
+.fabian.info,
+.kristen.info,
+.riz.info {
     display: none;
+}
+
+.start.info.show,
+.fig.info.show,
+.adaine.info.show,
+.gorgug.info.show,
+.fabian.info.show,
+.kristen.info.show,
+.riz.info.show {
+    display: inline;
+}
+
+
+/*-------------------*/
+
+
+/* ----- ABOUT -----*/
+
+#about {
+    /* height: 100vh; */
+    background-image: url('img/landing.jpg');
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: -30vh;
+    background-color: #010C12;
+    /* background-image: linear-gradient(to bottom right, #00bbcd, #00bbcd, #a55285); */
+    position: absolute;
+    z-index: 2;
+    padding: 100px;
+}
+
+#about .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+#about .wrapper {
+    width: 50%;
+    background-color: #a55285;
+    padding: 50px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+
+/* ----------------------- */
+
+
+/* ----- ANIMATIONS ------ */
+
+
+/* ----------------------- */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .25;
+    }
+    100% {
+        opacity: .5;
+    }
+}
+
+@keyframes in {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: .5;
+    }
+    50% {
+        opacity: .25;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes out {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 0;
+    }
 }

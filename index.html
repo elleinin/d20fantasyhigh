@@ -16,6 +16,8 @@
 <body>
     <header>
         <nav class="navbar">
+        </nav>
+        <nav class="nav">
             <div><a href="#home">About</a>
             </div>
             <div><a href="#cast">Cast</a></div>
@@ -25,71 +27,82 @@
     </header>
 
     <section id="home">
-
         <div class="landing"></div>
-        <div class="container"></div>
-        <div class="intro">
-            <h1>FANTASY HIGH</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi alias vitae hic nostrum voluptatum porro facilis beatae esse voluptatem placeat.</p>
+    </section>
+    <section id="intro">
+        <div class="container">
+            <div class="intro">
+                <h1 class="fhh1">FANTASY HIGH</h1>
+                <p class="fhp">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi alias vitae hic nostrum voluptatum porro facilis beatae esse voluptatem placeat.</p>
+            </div>
         </div>
+        <div class="wrapper">
+            <img src="img/fig2.png" alt="" id="fig">
+            <img src="img/adaine2.png" alt="" id="adaine">
+            <img src="img/gorgug2.png" alt="" id="gorgug">
+            <img src="img/riz2.png" alt="" id="riz">
+            <img src="img/kristen2.png" alt="" id="kristen">
+            <img src="img/fabian2.png" alt="" id="fabian">
         </div>
     </section>
+    <section id="bet"></section>
     <section id="cast">
+        <div class="fig bg"></div>
+        <div class="adaine bg"></div>
+        <div class="gorgug bg"></div>
+        <div class="fabian bg"></div>
+        <div class="kristen bg"></div>
+        <div class="riz bg"></div>
         <div class="container">
             <div class="wrapper cast">
-                <div class="card fig"></div>
-                <div class="card adaine"></div>
-                <div class="card gorgug"></div>
-                <div class="card fabian"></div>
-                <div class="card kristen"></div>
-                <div class="card riz"></div>
+                <div class="fig card"></div>
+                <div class="adaine card"></div>
+                <div class="gorgug card"></div>
+                <div class="fabian card"></div>
+                <div class="kristen card"></div>
+                <div class="riz card"></div>
             </div>
             <div class="wrapper info">
-                <div class="info start">
+                <div class="start info show">
                     <h2>EVERYBODY SAY "HEY INTREPID HEROES!"</h1>
                         <h3>Dungeon Master: Brennan Lee Mulligan</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla distinctio enim natus doloremque exercitationem perferendis repellendus atque delectus ratione. Officiis!</p>
                 </div>
-                <div class="info fig">
-                    <h1>FIG FAETH</h1>
+                <div class="fig info">
+                    <h2>FIG FAETH</h2>
                     <h3>Played by Emily Axford</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla distinctio enim natus doloremque exercitationem perferendis repellendus atque delectus ratione. Officiis!</p>
                 </div>
-                <div class="info adaine">
-                    <h1>ADAINE ABERNANT</h1>
+                <div class="adaine info">
+                    <h2>ADAINE ABERNANT</h2>
                     <h3>Played by Siobhan Thompson</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla distinctio enim natus doloremque exercitationem perferendis repellendus atque delectus ratione. Officiis!</p>
                 </div>
-                <div class="info gorgug">
-                    <h1>GORGUG THISTLESPRING</h1>
+                <div class="gorgug info">
+                    <h2>GORGUG THISTLESPRING</h2>
                     <h3>Played by Zac Oyama</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla distinctio enim natus doloremque exercitationem perferendis repellendus atque delectus ratione. Officiis!</p>
                 </div>
-                <div class="info fabian">
-                    <h1>FABIAN SEACASTER</h1>
+                <div class="fabian info">
+                    <h2>FABIAN SEACASTER</h2>
                     <h3>Played by Lou Wilson</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla distinctio enim natus doloremque exercitationem perferendis repellendus atque delectus ratione. Officiis!</p>
                 </div>
-                <div class="info kristen">
-                    <h1>KRISTEN APPLEBEES</h1>
+                <div class="kristen info">
+                    <h2>KRISTEN APPLEBEES</h2>
                     <h3>Played by Ally Beardsley</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla distinctio enim natus doloremque exercitationem perferendis repellendus atque delectus ratione. Officiis!</p>
                 </div>
-                <div class="info riz">
-                    <h1>RIZ GUKGAK</h1>
+                <div class="riz info">
+                    <h2>RIZ GUKGAK</h2>
                     <h3>Played by Brian Murphy</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla distinctio enim natus doloremque exercitationem perferendis repellendus atque delectus ratione. Officiis!</p>
                 </div>
             </div>
         </div>
-        <div class="bg fig"></div>
-        <div class="bg adaine"></div>
-        <div class="bg gorgug"></div>
-        <div class="bg fabian"></div>
-        <div class="bg kristen"></div>
-        <div class="bg riz"></div>
     </section>
-    <section id="d20">
+    <!-- <section id="d20">
+
         <div class="container">
             <h1>DIMENSION 20</h1>
             <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur error laboriosam voluptate culpa, magnam sit eaque quia voluptatum quas officiis!</h3>
@@ -101,7 +114,7 @@
                 <div class="card mismag"></div>
             </div>
         </div>
-    </section>
+    </section> -->
     <section id="about">
         <div class="container">
             <div class="wrapper abt">
@@ -110,6 +123,8 @@
             </div>
         </div>
     </section>
+
+    <script src="index.js"></script>
 </body>
 
 </html>

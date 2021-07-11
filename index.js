@@ -6,6 +6,7 @@
 const land = document.querySelector('.landing');
 const fhh1 = document.querySelector('.fhh1');
 const fhp = document.querySelector('.fhp');
+const fhst = document.querySelector('#intro .subtext');
 const intro = document.getElementById('intro');
 const home = document.getElementById('home');
 const fltfig = document.getElementById('fig');
@@ -152,4 +153,5 @@ function hide(card) {
 function introLoad() {
     fhh1.classList.add('in');
     fhp.classList.add('in');
+    fhst.classList.add('in');
 }
